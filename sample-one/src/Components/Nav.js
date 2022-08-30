@@ -56,7 +56,7 @@ function TTRSNav() {
           <ReactBootstrap.Nav>
           <ReactBootstrap.Nav.Link href="History">Booking History</ReactBootstrap.Nav.Link>
             <ReactBootstrap.Nav.Link href="Contact">Contact Us</ReactBootstrap.Nav.Link>
-            <ReactBootstrap.Nav.Link eventKey={2} href="Login">
+            <ReactBootstrap.Nav.Link onClick={handlelogout} >
               Logout
             </ReactBootstrap.Nav.Link>
           </ReactBootstrap.Nav>
