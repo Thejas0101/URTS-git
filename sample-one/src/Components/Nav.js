@@ -34,6 +34,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import * as ReactBootstrap from "react-bootstrap"
 
 function TTRSNav() {
+  const navigate = useNavigate();
+  function handlelogout(){
+    console.log(document.cookie)
+    document.cookie = "'';Path=/;";
+    console.log(`document.cookie `,document.cookie)
+    navigate('/');
+  }
+
   return (
     <ReactBootstrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <ReactBootstrap.Container>
