@@ -32,6 +32,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import * as ReactBootstrap from "react-bootstrap"
+import { useNavigate } from 'react-router-dom';
 
 function TTRSNav() {
   const navigate = useNavigate();
