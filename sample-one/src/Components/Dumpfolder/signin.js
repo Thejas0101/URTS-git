@@ -63,7 +63,7 @@ function Signin() {
             <br></br>
             <br></br>
             <p>
-              Admin?<a href="Sampleadmin">Admin</a>
+              Admin?<a href="Adminlog">Admin</a>
             </p>
 
             <p>
