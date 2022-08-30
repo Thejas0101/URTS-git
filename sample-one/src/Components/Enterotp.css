@@ -1,0 +1,17 @@
+.otp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.otp control{
+    width: 300px;
+    
+}
+
+.otp button{
+    width: 300px;
+    border-radius: 15px;
+    
+}

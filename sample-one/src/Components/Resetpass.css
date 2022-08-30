@@ -1,0 +1,17 @@
+.Reset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.Reset control{
+    width: 300px;
+    
+}
+
+.Reset button{
+    width: 300px;
+    border-radius: 15px;
+    
+}

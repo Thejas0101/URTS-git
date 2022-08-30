@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "Name": "Vasco Express",
+      "Num": "17309",
+      "From": "Yeshwanthpur",
+      "To": "Vasco"
+    },
+    {
+      "id": 2,
+      "Name": "Yeshwanthpur express",
+      "Num": "17310",
+      "From": "Vasco",
+      "To": "Yeshwanthpur"
+    },
+    {
+      "id": 3,
+      "Name": "Tumkur Express",
+      "Num": "95134",
+      "From": "Majestic",
+      "To": "Tumkur"
+    },
+    {
+      "id": 4,
+      "Name": "Bangalore Exp",
+      "Num": "95135",
+      "From": "Tumakur",
+      "To": "Majestic"
+    },
+    {
+      "id": 5,
+      "Name": "Mangaluru Intercity",
+      "Num": "42685",
+      "From": "Yeshwanthpur",
+      "To": "Mangaluru"
+    },
+    {
+      "id": 6,
+      "Name": "Bangalore Exp",
+      "Num": "42686",
+      "From": "Mangaluru",
+      "To": "Yeshwanthpur"
+    },
+    {
+      "id": 7,
+      "Name": "Hassan Intercity",
+      "Num": "75316",
+      "From": "Yeshwanthpur",
+      "To": "Hassan"
+    },
+    {
+      "id": 8,
+      "Name": "Yeshwanthpur express",
+      "Num": "75316",
+      "From": "Hassan",
+      "To": "Yeshwanthpur"
+    }
+    
+  ]

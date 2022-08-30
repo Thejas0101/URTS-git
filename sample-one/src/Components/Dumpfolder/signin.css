@@ -1,0 +1,40 @@
+.Signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.Signin control{
+    width: 300px;
+    
+}
+
+.Signin button{
+    width: 300px;
+    border-radius: 15px;
+    
+}
+
+#box1{
+
+    padding-top: 150px;
+}
+
+#Contain{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    
+    width: 400px;
+    box-shadow: 0 15px 25px rgba(171, 153, 153, 0.2);
+    height: 500px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding : 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+

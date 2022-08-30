@@ -1,0 +1,17 @@
+.pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pass control{
+    width: 300px;
+    
+}
+
+.pass button{
+    width: 300px;
+    border-radius: 15px;
+    
+}

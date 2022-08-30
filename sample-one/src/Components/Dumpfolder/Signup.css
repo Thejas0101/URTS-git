@@ -1,0 +1,42 @@
+.Signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+.Signup control{
+    width: 300px;
+    
+}
+
+.Signup button{
+    width: 300px;
+    border-radius: 15px;
+    
+}
+
+#box2{
+
+    padding-top: 50px;
+}
+
+#Container1{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    width: 400px;
+    box-shadow: 0 15px 25px rgba(171, 153, 153, 0.2);
+    height: 450px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding : 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
