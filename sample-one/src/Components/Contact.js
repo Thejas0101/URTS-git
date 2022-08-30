@@ -9,7 +9,7 @@ import './Contact.css'
 
 function Contact() {
 
-  const [id] = useState(0);
+const [id] = useState(0);
 const [email, setEmail] = useState("");
 const [message, setMessage] = useState("");
 
@@ -20,9 +20,15 @@ const add = () => {
   Axios.post('http://localhost:3001/message', {
       id: id,
       email: email ,
-      message: message
-  }).then(() => {
+      message: message},
+      {
+        headers: {
+          authorization: document.cookie,
+        },
+      }).then(() => {
       console.log(' message Successfully sent.')
+  }).catch((err)=>{
+    alert("Hello! I am an alert box!!");
   }); 
 }
 

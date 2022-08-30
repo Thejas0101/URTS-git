@@ -6,6 +6,10 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const { generateAccessToken, validateToken } = require("./auth");
+const { Router } = require("express");
+const router = Router();
+
 
 app.use(cors());
 app.use(express.json());
@@ -67,6 +71,38 @@ app.post('/create',(req,res)=>{
 })
 
 
+app.post("/Signin", (req, res) => {
+    const { email, password } = req.body;
+    console.log("in login");
+    console.log(email, password);
+    // Ideally search the user in a database and validate password, throw an error if not found.
+    db.query(
+      "SELECT * FROM people WHERE 	email = ? AND password = ?",
+      [email, password],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          if (result.length > 0) {
+            console.log(result);
+            user = result[0]["name"]; //enter the name of the person
+            console.log(`user : ${user}`);
+            const token = generateAccessToken(user);
+            console.log(token);
+            res.json({
+              token: `Bearer ${token}`,
+            });
+          } else {
+            res.statusCode = 400;
+            console.log(result);
+            res.send("not found");
+          }
+        }
+      }
+    );
+    //   else res.sendStatus(401);
+  });
+
 
 app.post('/usercreate',(req,res)=>{
     
@@ -93,7 +129,7 @@ app.post('/usercreate',(req,res)=>{
     });
 })
 
-app.post('/message',(req,res)=>{
+app.post('/message',validateToken,(req,res)=>{
     
     const id= req.body.id;
 

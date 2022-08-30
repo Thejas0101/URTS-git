@@ -24,7 +24,7 @@ function Adminlog() {
 
   function ticketamountcalculation()
   {  
-      Axios.get("http://localhost:3001/GetTicketAmount",{ 
+      Axios.get("http://localhost:3002/GetTicketAmount",{ 
     })
     .then((response) => {
       console.log(response);
@@ -65,7 +65,7 @@ function Adminlog() {
           <Form.Label>Train Number</Form.Label> */}
           {/* <select onChange={(event) => setTrainnumber(event.target.value)}> */}
           <Form.Label>Train</Form.Label>
-            <select name="select01" id="select1" onChange= {handleSelect()}>
+            <select required name="select01" id="select1" onChange= {handleSelect()}>
              <option value="" hidden>Choose option</option>
              <option id='1' value="12345">Vasco express</option>
              <option id='2'  value="12346">Yeshwanthpur</option>
@@ -91,7 +91,7 @@ function Adminlog() {
 
         <Form.Group className="mb-3" controlId="formBasicId">
           <Form.Label>No. of tickets</Form.Label>
-          <select type="number" onChange={(event) => setNumberoftickets(event.target.value)}>
+          <select required type="number" onChange={(event) => setNumberoftickets(event.target.value)}>
              <option value="" hidden>No. of tickets</option>
              <option value="1">01</option>
              
@@ -105,7 +105,7 @@ function Adminlog() {
         </Button>
         <br></br>
         <br></br>
-         <Form.Control type='number' placeholder='Total amount' value={totalticketamount}
+         <Form.Control required type='number' placeholder='Total amount' value={totalticketamount}
         onChange={(event) => setTotalticketamount(event.target.value)}></Form.Control>
         <br></br>
         <Button href='Payment' variant="primary" type="submit"  onClick={addTicketBookingReacord}>

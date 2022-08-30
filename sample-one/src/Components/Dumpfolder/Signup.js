@@ -33,7 +33,7 @@ const add = () => {
 
 
   return (
-    
+    <form >
 <div className='Signup'>
   <div id='box2'>
     <div id='Container1'>
@@ -43,7 +43,7 @@ const add = () => {
     {/* <label>
       Username
     </label> */}
-    <input type="text"require onChange={(event) => {setName(event.target.value)}}  placeholder='Username'></input><br></br>
+    <input type="text" required onChange={(event) => {setName(event.target.value)}}  placeholder='Username'></input><br></br>
     <br></br>
     {/* <label>
       Mobile_number
@@ -63,9 +63,9 @@ const add = () => {
     {/* <label>
       Confirm Password
     </label> */}
-    <input type="password"required  onChange={(event) => {setConfirmpassword(event.target.value)}}  placeholder='Confirm password'></input><br></br>
+    <input type="password" required  onChange={(event) => {setConfirmpassword(event.target.value)}}  placeholder='Confirm password'></input><br></br>
     <br></br>
-    <Button  variant="contained" onClick={add}>  Register </Button>
+    <Button type='Submit'  variant="contained" onClick={add}>  Register </Button>
     </form>
  
  
@@ -75,7 +75,7 @@ const add = () => {
   </div>   
 
 </div>
-
+</form>
 
 
 
