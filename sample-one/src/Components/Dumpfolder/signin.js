@@ -22,7 +22,7 @@ function UserSignin() {
           console.log("Token recieved");
           document.cookie = res.data.token + "; Path=/;";
           console.log(document.cookie);
-          //window.location.replace("http://localhost:3000/Home");
+          window.location.replace("http://localhost:3000/Home");
         }
       })
       .catch((err) => {
