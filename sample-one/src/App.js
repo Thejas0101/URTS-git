@@ -48,16 +48,16 @@ function App() {
       
       
 
-      {/* {locationObj.pathname == '/' ? null  : 
+      {locationObj.pathname == '/' ? null  : 
         locationObj.pathname == '/Signup' ? null :
         locationObj.pathname == '/Adminlog' ? null :
         locationObj.pathname == '/Login' ? null :
         
-        locationObj.pathname == '/Sampleadmin' ? null : <Navbar/> } */}
+        locationObj.pathname == '/Sampleadmin' ? null : <Navbar/> }
 
         <Routes>
           
-          <Route path='/Login' element={<UserSignin></UserSignin>}></Route>
+          <Route path='/' element={<UserSignin></UserSignin>}></Route>
           <Route path='/Home' element={<Home></Home>}></Route>
           <Route path='/Contact' element={<Contact></Contact>}></Route>
           <Route path='/More_details' element={<More_deatils></More_deatils>}></Route>
