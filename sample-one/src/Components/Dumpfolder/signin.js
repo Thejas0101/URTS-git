@@ -4,14 +4,14 @@ import "./signin.css";
 import {useState} from 'react'
 import Axios from 'axios'
 
-function Signin() {
+function UserSignin() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [notfound, setNotFound] =useState("");
 
   const userLogin = () => {
     console.log(email, password);
-    Axios.post("http://localhost:3001/Signin", {
+    Axios.post("http://localhost:3001/Login", {
       email: email,
       password: password,
     })
@@ -57,7 +57,7 @@ function Signin() {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               {/* <Form.Check type="checkbox" label="Check me out" /> */}
             </Form.Group>
-            <Button  variant="primary" type="submit" onClick={userLogin}>
+            <Button  variant="primary"  onClick={userLogin}>
               Login
             </Button>
             <br></br>
@@ -79,4 +79,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default UserSignin;

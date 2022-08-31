@@ -71,7 +71,7 @@ app.post('/create',(req,res)=>{
 })
 
 
-app.post("/Signin", (req, res) => {
+app.post("/Login", (req, res) => {
     const { email, password } = req.body;
     console.log("in login");
     console.log(email, password);
@@ -92,10 +92,13 @@ app.post("/Signin", (req, res) => {
             res.json({
               token: `Bearer ${token}`,
             });
+            console.log(res)
+            return;
           } else {
             res.statusCode = 400;
             console.log(result);
             res.send("not found");
+            return;
           }
         }
       }

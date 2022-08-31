@@ -5,7 +5,7 @@ import More_deatils from './Components/More_deatils';
 import Home from './Components/Home';
 import {BrowserRouter,useLocation} from 'react-router-dom';
 import {Routes, Route,  } from 'react-router-dom';
-import Signin from './Components/Dumpfolder/signin';
+import UserSignin from './Components/Dumpfolder/signin';
 import Signup from './Components/Dumpfolder/Signup';
 import Forgetpass from './Components/Forgetpass';
 import Adminlog from './Components/Dumpfolder/Adminlog';
@@ -48,20 +48,20 @@ function App() {
       
       
 
-      {locationObj.pathname == '/' ? null  : 
+      {/* {locationObj.pathname == '/' ? null  : 
         locationObj.pathname == '/Signup' ? null :
         locationObj.pathname == '/Adminlog' ? null :
         locationObj.pathname == '/Login' ? null :
         
-        locationObj.pathname == '/Sampleadmin' ? null : <Navbar/> }
+        locationObj.pathname == '/Sampleadmin' ? null : <Navbar/> } */}
 
         <Routes>
           
-          <Route path='/' element={<Signin></Signin>}></Route>
+          <Route path='/Login' element={<UserSignin></UserSignin>}></Route>
           <Route path='/Home' element={<Home></Home>}></Route>
           <Route path='/Contact' element={<Contact></Contact>}></Route>
           <Route path='/More_details' element={<More_deatils></More_deatils>}></Route>
-          <Route path='/Login'element={<Signin></Signin>}></Route>
+          {/* <Route path='/Login'element={<Signin></Signin>}></Route> */}
           <Route path='/Signup'element={<Signup></Signup>}></Route>
           <Route path='/Adminlog'element={<Adminlog></Adminlog>}></Route>
           <Route path='/Forgetpass'element={<Forgetpass></Forgetpass>}></Route>
