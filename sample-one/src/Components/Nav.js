@@ -40,6 +40,7 @@ function TTRSNav() {
     console.log(document.cookie)
     document.cookie = "'';Path=/;";
     console.log(`document.cookie `,document.cookie)
+    alert("logout successful")
     navigate('/');
   }
 

@@ -13,31 +13,68 @@ function Adminlog() {
   const [numberoftickets, setNumberoftickets] = useState("");
   let [ticketcost, setTicketcost] = useState("");
   const [totalticketamount, setTotalticketamount] = useState(0);
-  function handleSelect(){
-    // document.getElementById("select01")
-    // {
-    //   var optionID=document.getElementById('1');    
-    // }
-    // console.log(optionID.value);
-  }
+  // var trnum = 0;
 
 
   function ticketamountcalculation()
   {  
-      Axios.get("http://localhost:3002/GetTicketAmount",{ 
-    })
-    .then((response) => {
-      console.log(response);
-      // ticketcost = response.data.cost
-      // console.log(response.data);
-      // setTotalticketamount(ticketcost * numberoftickets);
+    //   Axios.get("http://localhost:3002/GetTicketAmount",{ 
+    // })
+    // .then((response) => {
+    //   console.log(response);
+    //   // ticketcost = response.data.cost
+    //   // console.log(response.data);
+    //   // setTotalticketamount(ticketcost * numberoftickets);
       
-      // console.log(totalticketamount)
-    });
+    //   // console.log(totalticketamount)
+    // });
     
-    
+    var x = document.getElementById("select01").selectedIndex;
+    var pass = document.getElementById("passengers").value;
+    var y = document.getElementById("select01").options;
+    var sum = document.getElementById("total");
 
-     
+    var n = y[x].index;	
+    var price =0;
+    if(n=== 0)
+    {
+    price = 0;
+    }
+    else if(n===1)
+    {
+    price = 200;
+    }
+    else if(n ===2)
+    {
+    price = 200;
+    }
+    else if(n ===3)
+    {
+    price = 50;
+    }
+    else if(n ===4)
+    {
+    price = 50;
+    }
+    else if(n ===5)
+    {
+    price = 150;
+    }
+    else if(n ===6)
+    {
+    price = 150;
+    }
+    else if(n ===7)
+    {
+    price = 80;
+    }
+    else if(n ===8)
+    {
+    price = 80;
+    }
+    
+    var tot = price*pass
+    sum.innerText=tot;
   }
 
 
@@ -64,14 +101,17 @@ function Adminlog() {
         {/* <Form.Group className="mb-3" controlId="formBasicId">
           <Form.Label>Train Number</Form.Label> */}
           {/* <select onChange={(event) => setTrainnumber(event.target.value)}> */}
-          <Form.Label>Train</Form.Label>
-            <select required name="select01" id="select1" onChange= {handleSelect()}>
-             <option value="" hidden>Choose option</option>
-             <option id='1' value="12345">Vasco express</option>
-             <option id='2'  value="12346">Yeshwanthpur</option>
-             <option>Tumkur</option>
-             <option>Hassan</option>
-             <option>Majestic</option>
+          <Form.Label>Train : .</Form.Label>
+            <select id="select01">
+             <option >Choose option</option>
+             <option >Yeshwanthpur-Vasco</option>
+             <option >Vasco-Yeshwanthpur</option>
+             <option >Majestic-Tumkur</option>
+             <option >Tumkur-Majestic</option>
+             <option >Yeshwanthpur-Mangalore</option>
+             <option >Mangalore-Yeshwanthpur</option>
+             <option >Yeshwanthpur-Hassan</option>
+             <option >Hassan-Yeshwanthpur</option>
           </select>
           {/* <input type='number' placeholder='Train Number' 
         onChange={(e) => setTrainnumber(e.target.value)}></input> */}
@@ -91,11 +131,12 @@ function Adminlog() {
 
         <Form.Group className="mb-3" controlId="formBasicId">
           <Form.Label>No. of tickets</Form.Label>
-          <select required type="number" onChange={(event) => setNumberoftickets(event.target.value)}>
+          {/* <select required type="number" onChange={(event) => setNumberoftickets(event.target.value)}>
              <option value="" hidden>No. of tickets</option>
              <option value="1">01</option>
              
-          </select>
+          </select> */}
+          <input type="number" min = "1" id= "passengers" ></input>
         </Form.Group>
 
        
@@ -105,8 +146,11 @@ function Adminlog() {
         </Button>
         <br></br>
         <br></br>
-         <Form.Control required type='number' placeholder='Total amount' value={totalticketamount}
-        onChange={(event) => setTotalticketamount(event.target.value)}></Form.Control>
+
+        <label>total amount :- </label>
+         <label required type='number' id="total" placeholder='Total amount'
+        >0</label>
+        <br></br>
         <br></br>
         <Button href='Payment' variant="primary" type="submit"  onClick={addTicketBookingReacord}>
           Book Now
@@ -118,7 +162,15 @@ function Adminlog() {
       </div>
       
     )
-    
+    function handleSelect(){
+      if (document.getElementById("select01"))
+      {
+        var trnum = document.getElementById("select01").selectedIndex;
+        console.log([trnum].index);
+      }
+      
+    }
+  
 
   }
   

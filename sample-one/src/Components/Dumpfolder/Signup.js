@@ -18,7 +18,8 @@ const [confirmpassword, setConfirmpassword] = useState("");
 
 const add = () => {
   console.log("reaching here")
-  Axios.post('http://localhost:3001/usercreate', {
+  if(password === confirmpassword){
+    Axios.post('http://localhost:3001/usercreate', {
    
       // id: id,
       name: name,
@@ -28,16 +29,23 @@ const add = () => {
       confirmpassword: confirmpassword
   }).then(() => {
       console.log('Successfully created client record.')
+      alert("user registered successfully")
+     
   }); 
+  }
+  else{
+    alert("password dont match");
+  }
+  
 }
 
 
   return (
-    <form >
+  
 <div className='Signup'>
   <div id='box2'>
     <div id='Container1'>
-    <form Validate>
+    <form onSubmit={add}>
        <h1>Register here</h1>
   <br></br>
     {/* <label>
@@ -65,7 +73,8 @@ const add = () => {
     </label> */}
     <input type="password" required  onChange={(event) => {setConfirmpassword(event.target.value)}}  placeholder='Confirm password'></input><br></br>
     <br></br>
-    <Button type='Submit'  variant="contained" onClick={add}>  Register </Button>
+    <Button type='submit'  variant="contained" >  Register </Button>
+    <a href='Login'>already registered? go to Login</a>
     </form>
  
  
@@ -75,7 +84,7 @@ const add = () => {
   </div>   
 
 </div>
-</form>
+
 
 
 

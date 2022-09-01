@@ -106,6 +106,42 @@ app.post("/Login", (req, res) => {
     //   else res.sendStatus(401);
   });
 
+  //Admin login request below
+  app.post("/Adminlogin", (req, res) => {
+    const { email, password } = req.body;
+    console.log("in login");
+    console.log(email, password);
+    // Ideally search the user in a database and validate password, throw an error if not found.
+    db.query(
+      "SELECT * FROM admin WHERE 	email = ? AND password = ?",
+      [email, password],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          if (result.length > 0) {
+            console.log(result);
+            user = result[0]["name"]; //enter the name of the person
+            console.log(`user : ${user}`);
+            const token = generateAccessToken(user);
+            console.log(token);
+            res.json({
+              token: `Bearer ${token}`,
+            });
+            console.log(res)
+            return;
+          } else {
+            res.statusCode = 400;
+            console.log(result);
+            res.send("not found");
+            return;
+          }
+        }
+      }
+    );
+    //   else res.sendStatus(401);
+  });
+
 
 app.post('/usercreate',(req,res)=>{
     
@@ -193,7 +229,7 @@ app.get('/getcontact', (req,res)=>{
 app.get('/GetTicketAmount', (req,res)=>{
     const trainnumber = req.body.trainnumber;
     console.log(trainnumber);
-    db.query('SELECT * FROM booktik WHERE TrainNumber=?' ,[trainnumber] , (error, result)=>{
+    db.query('SELECT * FROM booktik' , (error, result)=>{
         if (error)
         {console.log(error)}
         else{

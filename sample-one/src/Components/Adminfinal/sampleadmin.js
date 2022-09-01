@@ -24,7 +24,7 @@ function Sampleadmin() {
       </Button></div>
     <br></br>
       <div>
-      <Button  href="Login"variant="dark" type="submit">
+      <Button  href="Adminlog"variant="dark" type="submit">
         Logout
       </Button></div></center>
       </div>

@@ -32,7 +32,7 @@ function Payment() {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         {/* <Form.Check type="checkbox" label="Check me out" /> */}
       </Form.Group>
-      <Button  href="Home"variant="primary" type="submit">
+      <Button  required href="Successful"variant="primary" type="submit">
         Make payment
 
       </Button>

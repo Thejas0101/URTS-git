@@ -16,6 +16,8 @@ function History() {
                         <th> Train number</th>
                         <th> From</th>
                         <th> To</th>
+                        <th> No. of tickets</th>
+                        <th> Total price</th>
                         
                     </tr>
                 </thead>
@@ -24,6 +26,8 @@ function History() {
                   <td>12345</td>
                   <td>Yeshwanthpur</td>
                   <td>Vasco</td>
+                  <td>04</td>
+                  <td>800</td>
                 </thead>
                 
                 

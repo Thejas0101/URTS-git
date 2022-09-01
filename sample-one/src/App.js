@@ -16,18 +16,13 @@ import Booktik from './Components/Booktik'
 import Update from './Components/Adminfinal/update';
 import Trainlist from './Components/Trainlist';
 import Navbar from "./Components/Nav"
-// import Admin from './Components/Admin/Admin';
 import Sampleadmin from './Components/Adminfinal/sampleadmin';
 import History from './Components/History';
 import LoginPage from './Components/Dumpfolder/LoginPage'
-// import Sidebar from './Components/Adminfinal/Sidebar';
-// import Contactuser from './Components/Adminfinal/pages/Contactuser';
-// import Dashboard from './Components/Adminfinal/pages/Dashboard';
-// import List from './Components/Adminfinal/pages/List';
-// import Users from './Components/Adminfinal/pages/Users';
 import Payment from './Components/Payment';
 import Users from './Components/Adminfinal/Users';
 import Suggestions from './Components/Adminfinal/Suggestions';
+import Successful from './Components/Successful';
 
 
 // import Admin from './Components/Admin/Admin';
@@ -53,7 +48,7 @@ function App() {
         locationObj.pathname == '/Adminlog' ? null :
         locationObj.pathname == '/Login' ? null :
         
-        locationObj.pathname == '/Sampleadmin' ? null : <Navbar/> }
+        locationObj.pathname == '/sampleadmin' ? null : <Navbar/> }
 
         <Routes>
           
@@ -83,6 +78,7 @@ function App() {
           <Route path='/Payment'element={<Payment></Payment>}></Route>
           <Route path='/Users'element={<Users></Users>}></Route>
           <Route path='/Suggestions'element={<Suggestions></Suggestions>}></Route>
+          <Route path='/Successful'element={<Successful></Successful>}></Route>
           
           
           
