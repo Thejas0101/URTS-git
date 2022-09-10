@@ -30,6 +30,9 @@ import {Table,} from 'react-bootstrap';
 
 return(
   <div className='bc'>
+    <div className='Sug'>
+    <center><h1>User Suggestions</h1></center></div>
+    <br></br>
     <Table border={3} striped bordered hover className='bb'>
                 <thead className="abc1">
                     <tr>

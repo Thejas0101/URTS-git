@@ -26,7 +26,9 @@ import './Records.css'
 }, );
 
 return(
+    
   <div >
+    <center><h1>Users Train List</h1></center>
     <Table border={3} striped bordered hover className='cc'>
                 <thead className="abc1">
                     <tr>

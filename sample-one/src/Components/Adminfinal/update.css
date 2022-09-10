@@ -1,6 +1,10 @@
 .up{
     justify-content: center;
-    padding-top: 250px;
-    padding-left: 700px;
+    padding: 100px;
+    background-color: aqua;
 }
-
+.up1{
+    width: 60%;
+    padding-top: 30px;
+    padding-left: 450px;
+}

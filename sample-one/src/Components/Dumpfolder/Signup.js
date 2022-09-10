@@ -74,7 +74,9 @@ const add = () => {
     <input type="password" required  onChange={(event) => {setConfirmpassword(event.target.value)}}  placeholder='Confirm password'></input><br></br>
     <br></br>
     <Button type='submit'  variant="contained" >  Register </Button>
-    <a href='Login'>already registered? go to Login</a>
+    <div>
+    <a href='/'>Already Registered ? Back to Login</a>
+    </div>
     </form>
  
  

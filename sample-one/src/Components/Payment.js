@@ -27,7 +27,7 @@ function Payment() {
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Mobile number</Form.Label>
-        <Form.Control type="text" placeholder="Mobile number" />
+        <Form.Control type="number" placeholder="Mobile number" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         {/* <Form.Check type="checkbox" label="Check me out" /> */}

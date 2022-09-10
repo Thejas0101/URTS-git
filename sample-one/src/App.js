@@ -23,10 +23,7 @@ import Payment from './Components/Payment';
 import Users from './Components/Adminfinal/Users';
 import Suggestions from './Components/Adminfinal/Suggestions';
 import Successful from './Components/Successful';
-
-
-// import Admin from './Components/Admin/Admin';
-
+import Bookings from './Components/Adminfinal/Bookings';
 
 
 
@@ -48,7 +45,11 @@ function App() {
         locationObj.pathname == '/Adminlog' ? null :
         locationObj.pathname == '/Login' ? null :
         
-        locationObj.pathname == '/sampleadmin' ? null : <Navbar/> }
+        locationObj.pathname == '/sampleadmin' ? null :
+        locationObj.pathname == '/Records' ? null :
+        locationObj.pathname == '/Suggestions' ? null :
+        locationObj.pathname == '/users' ? null :
+        locationObj.pathname == '/Bookings' ? null :<Navbar/> }
 
         <Routes>
           
@@ -66,19 +67,14 @@ function App() {
           <Route path={`/update/:id`} element={<Update></Update>}></Route>
           <Route path='/Booktik'element={<Booktik></Booktik>}></Route>
           <Route path='/Trainlist'element={<Trainlist></Trainlist>}></Route>
-          {/* <Route path='/Admin'element={<Admin></Admin>}></Route> */}
           <Route path='/History'element={<History></History>}></Route>
           <Route path='/sampleadmin'element={<Sampleadmin></Sampleadmin>}></Route>
           <Route path='/LoginPage'element={<LoginPage></LoginPage>}></Route>
-          {/* <Route path='/Sidebar'element={<Sidebar></Sidebar>}></Route>
-          <Route path='/Contactuser'element={<Contactuser></Contactuser>}></Route>
-          <Route path='/Dashboard'element={<Dashboard></Dashboard>}></Route>
-          <Route path='/List'element={<List></List>}></Route>
-          <Route path='/Users'element={<Users></Users>}></Route> */}
           <Route path='/Payment'element={<Payment></Payment>}></Route>
           <Route path='/Users'element={<Users></Users>}></Route>
           <Route path='/Suggestions'element={<Suggestions></Suggestions>}></Route>
           <Route path='/Successful'element={<Successful></Successful>}></Route>
+           <Route path='/Bookings'element={<Bookings></Bookings>}></Route>
           
           
           

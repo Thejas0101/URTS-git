@@ -23,6 +23,12 @@ function Sampleadmin() {
         Suggestions
       </Button></div>
     <br></br>
+    
+      <div>
+      <Button  href="Bookings"variant="dark" type="submit">
+        Bookings
+      </Button></div>
+    <br></br>
       <div>
       <Button  href="Adminlog"variant="dark" type="submit">
         Logout

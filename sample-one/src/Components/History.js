@@ -22,10 +22,10 @@ function History() {
                     </tr>
                 </thead>
                 <thead>
-                  <td>Vasco Express</td>
-                  <td>12345</td>
-                  <td>Yeshwanthpur</td>
+                  <td>Yeshwanthpur express</td>
+                  <td>12346</td>
                   <td>Vasco</td>
+                  <td>Yeshwanthpur</td>
                   <td>04</td>
                   <td>800</td>
                 </thead>
